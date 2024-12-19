@@ -25,7 +25,7 @@ heroprotocol supports all Hereos of the Storm replay files that were played with
 
 ## Requirements
 
-* Python 2.7 or 3.x
+* Python 3.12 or newest
   * Note: A future release may remove support for Python 2.7
 * Python Packages:
   * mpyq 0.2.5+
@@ -33,17 +33,10 @@ heroprotocol supports all Hereos of the Storm replay files that were played with
 
 ## Installation
 
-Either install/update using pip:
+Either install/update using git:
 
 ```bash
-python -m pip install --upgrade heroprotocol
-```
-
-Or clone the repository and run from source:
-
-```bash
-git clone https://github.com/Blizzard/heroprotocol.git
-python -m pip install -r ./heroprotocol/heroprotocol/requirements.txt
+py -m pip install -U git+https://github.com/MrMalina/heroprotocol
 ```
 
 ## Command Line Arguments

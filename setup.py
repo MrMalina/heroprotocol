@@ -15,9 +15,9 @@ with open('README.md', 'r') as fh:
 setuptools.setup(
     name='heroprotocol',
     version=heroprotocol.build.game_version(),
-    author='Blizzard Entertainment',
+    author='Blizzard Entertainment (fix by MrMalina)',
     author_email='HeroesReplays@blizzard.com',
-    url='https://github.com/Blizzard/heroprotocol',
+    url='https://github.com/MrMalina/heroprotocol',
     description='Python library to decode Heroes of the Storm replays',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -29,7 +29,6 @@ setuptools.setup(
         'Intended Audience :: End Users/Desktop',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Topic :: Games/Entertainment :: Real Time Strategy',
         'Topic :: Software Development :: Libraries',
@@ -40,5 +39,5 @@ setuptools.setup(
     entry_points={
         'console_scripts': ['heroprotocol = heroprotocol.heroprotocol:main',]
     },
-    python_requires='>=2.7',
+    python_requires='>=3.12',
 )
