@@ -57,7 +57,6 @@ def latest():
     module_name = latest_version.split('.')[0]
 
     # Perform the import
-    print(base_path, module_name)
     return _import_protocol(base_path, module_name)
 
 
