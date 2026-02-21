@@ -13,7 +13,8 @@ import mpyq
 import pprint
 
 from .compat import json_dumps
-from .versions import build, latest
+
+from . import hero_protocol
 
 
 class EventLogger:
@@ -71,17 +72,9 @@ def main():
 
     # Read the protocol header, this can be read with any protocol
     contents = archive.header['user_data_header']['content']
-    header = latest().decode_replay_header(contents)
+    header = hero_protocol.decode_replay_header(contents)
     if args.header:
         logger.log(sys.stdout, header)
-
-    # The header's baseBuild determines which protocol to use
-    baseBuild = header['m_version']['m_baseBuild']
-    try:
-        protocol = build(baseBuild)
-    except:
-        print('Unsupported base build: %d' % baseBuild, file=sys.stderr)
-        sys.exit(1)
 
     # Print protocol details
     if args.details:
